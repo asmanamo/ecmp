@@ -1,0 +1,15 @@
+--- 🌿 SLP: ECMP Hash Collision Profiler ---
+Scenario: Synchronized AI Elephant Flows entering a Leaf-Spine Fabric
+
+🔹 Fabric ECMP Width: 32 parallel paths
+   -> Hashing 4 Elephant Flows: 17.85% chance of collision. ✅ SAFE
+   -> Hashing 8 Elephant Flows: 61.12% chance of collision. ⚠️ HIGH RISK (DLB/Packet Spraying Required)
+   -> Hashing 12 Elephant Flows: 89.2% chance of collision. ⚠️ HIGH RISK (DLB/Packet Spraying Required)
+   -> Hashing 16 Elephant Flows: 98.44% chance of collision. ⚠️ HIGH RISK (DLB/Packet Spraying Required)
+--------------------------------------------------
+🔹 Fabric ECMP Width: 64 parallel paths
+   -> Hashing 4 Elephant Flows: 9.06% chance of collision. ✅ SAFE
+   -> Hashing 8 Elephant Flows: 36.31% chance of collision. 🟡 WARNING (Tail latency spikes likely)
+   -> Hashing 12 Elephant Flows: 66.86% chance of collision. ⚠️ HIGH RISK (DLB/Packet Spraying Required)
+   -> Hashing 16 Elephant Flows: 86.82% chance of collision. ⚠️ HIGH RISK (DLB/Packet Spraying Required)
+--------------------------------------------------
